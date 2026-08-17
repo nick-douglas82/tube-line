@@ -1,0 +1,41 @@
+<script setup lang="ts">
+defineProps<{
+  colour: string;
+}>();
+</script>
+
+<template>
+  <div class="tube-station-marker">
+    <svg data-line-visual="true" viewBox="0 0 615.322 500" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path
+          :fill="colour"
+          d="M469.453,249.986c0,89.078-72.26,161.308-161.337,161.308c-89.1,0-161.294-72.23-161.294-161.308
+          c0-89.063,72.194-161.286,161.294-161.286C397.194,88.699,469.453,160.922,469.453,249.986
+          M308.116,0C170.027,0,58.094,111.925,58.094,249.986C58.094,388.06,170.027,500,308.116,500
+          c138.06,0,249.985-111.94,249.985-250.014C558.101,111.925,446.176,0,308.116,0"
+        />
+
+        <rect x="0" y="199.516" :fill="colour" width="615.322" height="101.129" />
+      </g>
+    </svg>
+  </div>
+</template>
+
+<style scoped>
+.tube-station-marker {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tube-station-marker svg {
+  width: 30px;
+  height: 24px;
+  transition:
+    opacity 150ms ease,
+    filter 150ms ease;
+}
+</style>
